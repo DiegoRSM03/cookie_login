@@ -10,20 +10,20 @@
     <title>User Login</title>
 </head>
 <body>
-    <h1>Formulario Inicio</h1>
     <form action="mk_cookie" method="post">
+        <h1>Log In</h1>
         <div class="mail">
             <span class="flaticon-user"></span>
-            <input type="text" name="user_mail">
+            <input type="text" name="user_mail" placeholder="Email or Account">
         </div>
         <div class="password">
             <span class="flaticon-door-key"></span>
-            <input type="text" name="user_psswd">
+            <input type="password" name="user_psswd" placeholder="Password">
         </div>
         <div class="remember_me">
-            <span class="flaticon-clipboard"></span>
-            <p>Remember Me</p>
             <input type="checkbox" name="remember_me">
+            <p>Remember Me</p>
+            <span class="flaticon-clipboard"></span>
         </div>
         <input type="submit" value="Submit">
     </form>
