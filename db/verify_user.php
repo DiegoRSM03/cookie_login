@@ -6,9 +6,9 @@ try {
     define('DB_USER', 'root');
     define('DB_PSSWD', '');
     
-    $userAccount = $_POST['user_accnt'];
-    $userPassword = $_POST['user_psswd'];
-    $rememberMe = $_POST['remember_me'];
+    $userAccount = htmlentities(addslashes($_POST['user_accnt']));
+    $userPassword = htmlentities(addslashes($_POST['user_psswd']));
+    $rememberMe = htmlentities(addslashes($_POST['remember_me']));
 
     $dbh = new PDO(DB_SOURCE, DB_USER, DB_PSSWD);
     $dbh->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_WARNING);
