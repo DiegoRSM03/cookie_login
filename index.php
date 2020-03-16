@@ -16,7 +16,7 @@
 <body>
     <form action="db/verify_user.php" method="post">
         <h1>Log In</h1>
-        <div class="mail">
+        <div class="account">
             <span class="flaticon-user"></span>
             <input type="text" name="user_accnt" placeholder="Email or Account">
         </div>

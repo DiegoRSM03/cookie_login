@@ -1,15 +1,15 @@
 <?php
 
-define("DB_SOURCE", "mysql:host=localhost;dbname=user");
-define("DB_USER", "root");
-define("DB_PSSWD", "");
-
 try {
+
+    define('DB_SOURCE', 'mysql:host=localhost;dbname=user');
+    define('DB_USER', 'root');
+    define('DB_PSSWD', '');
     
     $userAccount = $_POST['user_accnt'];
     $userPassword = $_POST['user_psswd'];
     $rememberMe = $_POST['remember_me'];
-    
+
     $dbh = new PDO(DB_SOURCE, DB_USER, DB_PSSWD);
     $dbh->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_WARNING);
     $dbh->exec('SET CHARACTER SET utf8');
