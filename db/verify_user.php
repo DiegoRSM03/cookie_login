@@ -19,17 +19,17 @@ try {
     $result = $dbh->prepare($query);
     $result->execute();
     
-    $authorized = false;
     while ($user = $result->fetch(PDO::FETCH_ASSOC)) {
-        ($user['account'] == $userAccount && $user['password'] == $userPassword) ? $authorized = true : $authorized = false;
-    }
-    
-    if ($authorized && $rememberMe) {
-        header('Location:../authorized/authorized.php?remember=yes');
-    } else if ($authorized && !$rememberMe) {
-        header('Location:../authorized/authorized.php');
-    } else {
-        header('Location:../index.php');
+        if ($user['account'] == $userAccount && $user['password'] == $userPassword) {
+            $result->closeCursor();
+            if ($rememberMe) {
+                header('Location:../authorized/authorized.php?remember=yes');
+            } else if (!$rememberMe) {
+                header('Location:../authorized/authorized.php');
+            } else {
+                header('Location:../index.php');
+            }
+        }
     }
 
 } catch (Exception $e) {
