@@ -25,9 +25,9 @@ try {
     }
     
     if ($authorized && $rememberMe) {
-        header('Location:../authorized?remember=yes.php');
+        header('Location:../authorized/authorized.php?remember=yes');
     } else if ($authorized && !$rememberMe) {
-        header('Location:../authorized?remember=no.php');
+        header('Location:../authorized/authorized.php');
     } else {
         header('Location:../index.php');
     }

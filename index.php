@@ -8,6 +8,10 @@
     <link rel="stylesheet" href="iconfont/flaticon.css">
 
     <title>User Login</title>
+
+    <?php
+    ($_COOKIE['remember']) ? header('Location: authorized/authorized.php') : '';
+    ?>
 </head>
 <body>
     <form action="db/verify_user.php" method="post">
