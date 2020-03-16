@@ -10,11 +10,11 @@
     <title>User Login</title>
 </head>
 <body>
-    <form action="mk_cookie" method="post">
+    <form action="db/verify_user.php" method="post">
         <h1>Log In</h1>
         <div class="mail">
             <span class="flaticon-user"></span>
-            <input type="text" name="user_mail" placeholder="Email or Account">
+            <input type="text" name="user_accnt" placeholder="Email or Account">
         </div>
         <div class="password">
             <span class="flaticon-door-key"></span>
